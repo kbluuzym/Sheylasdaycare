@@ -3,138 +3,340 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- 1. SEARCH ENGINE & BROWSER TAB TITLE -->
-    <title>Your Website Name – Short Tagline About What You Do</title>
-    <meta name="description" content="Write a 1–2 sentence summary of your website here. This text appears under your link in Google search results.">
-
-    <!-- 2. GOOGLE SITE NAME SCHEMA (Helps Google index your exact brand name) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Your Website Name",
-      "url": "https://yourusername.github.io/your-repo"
-    }
-    </script>
-
-    <!-- 3. BUILT-IN STYLING (CSS) -->
+    <title>Sheylas Daycare</title>
     <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #f1c40f;
+            --light-bg: #fdfefe;
+            --gray-bg: #f7f9f9;
+            --text-color: #333333;
+            --border-color: #e0e0e0;
+        }
+
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
+            font-family: Arial, sans-serif;
         }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: var(--text-color);
+            background-color: var(--light-bg);
             line-height: 1.6;
-            color: #222;
-            background-color: #f9fafb;
         }
+
+        /* Header / Navigation */
         header {
-            background-color: #111827;
-            color: #ffffff;
-            padding: 3rem 1.5rem;
-            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: white;
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: var(--primary-color);
         }
-        header p {
-            font-size: 1.15rem;
-            color: #d1d5db;
-            max-width: 600px;
-            margin: 0 auto;
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
         }
-        nav {
-            background-color: #1f2937;
-            padding: 0.75rem;
-            text-align: center;
-        }
+
         nav a {
-            color: #ffffff;
             text-decoration: none;
-            margin: 0 1rem;
-            font-weight: 500;
+            color: var(--text-color);
+            font-size: 0.95rem;
+            transition: color 0.2s;
         }
+
         nav a:hover {
-            text-decoration: underline;
+            color: #3498db;
         }
-        main {
-            max-width: 850px;
-            margin: 2.5rem auto;
-            padding: 0 1.5rem;
+
+        .search-icon {
+            font-size: 1.1rem;
+            cursor: pointer;
         }
-        section {
-            background: #ffffff;
-            padding: 2rem;
-            margin-bottom: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+
+        /* Hero Section */
+        .hero {
+            background-color: var(--gray-bg);
+            text-align: center;
+            padding: 80px 20px;
+            border-bottom: 1px solid var(--border-color);
         }
-        section h2 {
-            margin-bottom: 0.75rem;
-            color: #111827;
+
+        .hero h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
+
+        .hero h3 {
+            font-size: 1.2rem;
+            color: #555;
+            font-weight: normal;
+            margin-bottom: 30px;
+        }
+
         .btn {
             display: inline-block;
-            margin-top: 1rem;
-            padding: 0.75rem 1.5rem;
-            background-color: #2563eb;
-            color: #ffffff;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 28px;
+            border-radius: 4px;
             text-decoration: none;
-            border-radius: 6px;
-            font-weight: 600;
+            font-weight: bold;
+            transition: background 0.2s;
         }
+
         .btn:hover {
-            background-color: #1d4ed8;
+            background-color: #34495e;
         }
+
+        /* Sub Navigation / Section Links */
+        .section-links {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            padding: 25px 20px;
+            background-color: white;
+            border-bottom: 1px solid var(--border-color);
+            font-weight: bold;
+        }
+
+        .section-links a {
+            text-decoration: none;
+            color: var(--primary-color);
+            font-size: 0.95rem;
+        }
+
+        .section-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main Content Container */
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            margin-bottom: 60px;
+        }
+
+        section h2 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        section h3 {
+            font-size: 1.3rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .overview-text {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #444;
+            margin-bottom: 15px;
+        }
+
+        /* Why Families Choose Us Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .feature-item {
+            background: white;
+            padding: 20px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        .feature-item strong {
+            display: block;
+            font-size: 1.05rem;
+            color: var(--primary-color);
+            margin-bottom: 8px;
+        }
+
+        .feature-item p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
         footer {
+            background-color: var(--accent-color);
+            padding: 25px 40px;
             text-align: center;
-            padding: 2rem;
-            color: #6b7280;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
+            color: #2c3e50;
+            font-weight: bold;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            align-items: center;
+            border-top: 1px solid #d4ac0d;
+        }
+
+        footer .contact-info {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            font-weight: normal;
+        }
+
+        footer a {
+            color: #2c3e50;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 15px 20px;
+            }
+            nav ul {
+                gap: 15px;
+            }
+            .section-links {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- TOP BANNER -->
+    <!-- Header & Navigation -->
     <header>
-        <h1>Your Website Name</h1>
-        <p>A clear, welcoming tagline explaining who you are or what you offer.</p>
+        <div class="logo">Sheylas Daycare</div>
+        <nav>
+            <ul>
+                <li><a href="https://sites.google.com/view/sheylas-daycare/home?authuser=0">Home</a></li>
+                <li><a href="https://sites.google.com/view/sheylas-daycare/schedule?authuser=0">Schedule</a></li>
+                <li><a href="https://sites.google.com/view/sheylas-daycare/contact-enrollment?authuser=0">Contact & Enrollment</a></li>
+            </ul>
+        </nav>
+        <div class="search-icon">&#128269;</div>
     </header>
 
-    <!-- NAVIGATION LINKS -->
-    <nav>
-        <a href="#about">About</a>
-        <a href="#services">Services / Info</a>
-        <a href="#contact">Contact</a>
-    </nav>
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Sheylas Daycare</h1>
+        <h3>A Bilingual Home Daycare Filled With Learning, Love & Fun!</h3>
+        <a href="https://forms.gle/SC7Y8yvSsgDANCYt6" class="btn">Schedule a Tour | Contact Us</a>
+    </div>
 
-    <!-- MAIN CONTENT -->
-    <main>
-        <section id="about">
-            <h2>About Us</h2>
-            <p>Welcome to <strong>Your Website Name</strong>! Replace this paragraph with details about your project, business, or portfolio. Keep your wording clear and natural so visitors and search engines immediately understand what your page is about.</p>
+    <!-- Quick Navigation Links -->
+    <div class="section-links">
+        <a href="https://sites.google.com/view/sheylas-daycare/home#h.a8lpibs6msj9">Overview of Sheylas Daycare</a>
+        <a href="https://sites.google.com/view/sheylas-daycare/home#h.2qp24zzb1nm9">Daily Activities & Enrichment</a>
+        <a href="https://sites.google.com/view/sheylas-daycare/home#h.cwahx9z3bpzi">Why Families Choose Sheyla’s Daycare</a>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="container">
+
+        <!-- Overview Section -->
+        <section id="overview">
+            <h2>Overview of Sheylas Daycare</h2>
+            <p class="overview-text"><em>Located in the Pine Hill area of Lynn, MA, our home daycare is lovingly operated by educator Martha Mañón, alongside assistants.</em></p>
+            <p class="overview-text">We blend a structured early-childhood curriculum with a cozy home setting designed to make every child feel safe, valued, and inspired.</p>
+            <p class="overview-text">Our daycare combines English and Spanish, hands-on learning, creative activities, outdoor play, nutritious home-cooked meals, and meaningful celebrations throughout the year. Whether children are learning their first letters, making an art project, playing with friends, or preparing for kindergarten, our goal is to make every day a happy and memorable part of their childhood.</p>
+            <p class="overview-text">We believe that children learn best when they feel safe, loved, encouraged, and excited to explore.</p>
+            <p class="overview-text"><strong>We proudly accept both private tuition and state vouchers.</strong></p>
         </section>
 
-        <section id="services">
-            <h2>What We Offer</h2>
-            <p>Use this section to highlight your main features, offerings, or key information. You can duplicate this entire <code>&lt;section&gt;</code> block if you ever want to add more boxes to your page.</p>
+        <!-- Daily Activities Section -->
+        <section id="activities">
+            <h2>Daily Activities & Enrichment</h2>
+            <p class="overview-text">Explore our structured balance of playtime, educational milestones, and creative development tailored for growing minds.</p>
         </section>
 
-        <section id="contact">
-            <h2>Get in Touch</h2>
-            <p>Have questions or want to connect? Reach out directly below.</p>
-            <a href="mailto:youremail@example.com" class="btn">Email Us</a>
+        <!-- Why Families Choose Us Section -->
+        <section id="why-choose-us">
+            <h2>Why Families Choose Sheyla’s Daycare</h2>
+            <h3 style="font-weight: normal; font-size: 1.1rem; color: #555; margin-bottom: 25px;">More Than Childcare—A Place to Grow</h3>
+            
+            <div class="features-grid">
+                <div class="feature-item">
+                    <strong>🌳 Outdoor play</strong>
+                    <p>Backyard activities and nearby park.</p>
+                </div>
+                <div class="feature-item">
+                    <strong>🍎 Home-cooked meals</strong>
+                    <p>Nutritious food prepared with care.</p>
+                </div>
+                <div class="feature-item">
+                    <strong>❤️ Loving, personalized attention</strong>
+                    <p>Every child is treated as an individual.</p>
+                </div>
+                <div class="feature-item">
+                    <strong>🎨 Daily creativity</strong>
+                    <p>Art projects and hands-on activities encourage imagination.</p>
+                </div>
+                <div class="feature-item">
+                    <strong>📚 Early learning</strong>
+                    <p>Children practice letters, numbers, shapes, words, writing, and kindergarten-readiness skills.</p>
+                </div>
+                <div class="feature-item">
+                    <strong>🎂 Birthday celebrations</strong>
+                    <p>Every child's special day is celebrated.</p>
+                </div>
+                <div class="feature-item">
+                    <strong>🎓 Graduation celebrations</strong>
+                    <p>We proudly celebrate children as they prepare for kindergarten.</p>
+                </div>
+                <div class="feature-item">
+                    <strong>🍂 Seasonal fun</strong>
+                    <p>Decorations, crafts, and activities change throughout the year.</p>
+                </div>
+            </div>
         </section>
-    </main>
 
-    <!-- FOOTER -->
+    </div>
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Your Website Name. All rights reserved.</p>
+        <div class="contact-info">
+            <span>[Martha Manon]</span>
+            <span><a href="mailto:Perumartha@gmail.com">[Perumartha@gmail.com]</a></span>
+            <span><a href="tel:7819131907">[(781) 913-1907]</a></span>
+        </div>
+        <div style="font-size: 0.85rem; font-weight: normal; margin-top: 5px;">
+            Page updated Google Sites &bull; <a href="https://sites.google.com/u/0/d/1xjbLlDr0QAWj25pCskJ0AKo3NzswShd6/p/12W_3CWSyPze36M6E1G6EtbZFII5dgPOh/edit?authuser=0&usp=edit_published_site">Report abuse</a>
+        </div>
     </footer>
 
 </body>
